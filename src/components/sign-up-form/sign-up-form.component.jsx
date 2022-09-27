@@ -29,13 +29,17 @@ const SignUpForm = () => {
       return
     }
     try {
-      const { user } = await createAuthUserWithEmailAndPassword(email, password);
+      const { user } = await createAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
+
       await createUserDocumentFromAuth(user, {displayName});
       alert('User created')
       resetFormFields();
     } catch (e) {
       if (e.code === 'auth/email-already-in-use') {
-        alert('User already created', e)
+        alert('User already created')
       } else {
         console.log(e)
       }
