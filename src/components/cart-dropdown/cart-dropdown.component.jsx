@@ -12,8 +12,6 @@ const CartDropdown = () => {
 
   const goToCheckoutHandler = () => navigate('/checkout')
 
-  console.log(cartItems)
-
   return (
     <CartDropdownContainer>
       <CartItems>
