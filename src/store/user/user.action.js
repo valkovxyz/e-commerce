@@ -1,5 +1,6 @@
-import { createAction } from '../../utils/reducer.utils';
+import { createAction, withMatcher } from '../../utils/reducer.utils';
 import { USER_ACTION_TYPES } from './user.types';
+import { UserData } from '../../utils/firebase.utils'
 
 export const setCurrentUser = (user) =>
   createAction(USER_ACTION_TYPES.SET_CURRENT_USER, user);
