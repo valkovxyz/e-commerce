@@ -1,6 +1,6 @@
-import {CategoryItem} from "../categories/category.types";
-import {ActionWithPayload, createAction, withMatcher} from '../../utils/reducer.utils';
-import {CART_ACTION_TYPES, CartItem} from './cart.types';
+import { CategoryItem } from "../categories/category.types";
+import { ActionWithPayload, createAction, withMatcher } from '../../utils/reducer.utils';
+import { CART_ACTION_TYPES, CartItem } from './cart.types';
 
 const addCartItem = (cartItems: CartItem[], productToAdd: CategoryItem): CartItem[] => {
   const existingCartItem = cartItems.find(
@@ -23,7 +23,7 @@ const removeCartItem = (cartItems: CartItem[], cartItemToRemove: CartItem): Cart
     (cartItem) => cartItem.id === cartItemToRemove.id
   );
 
-  if ( existingCartItem && existingCartItem.quantity === 1) {
+  if (existingCartItem && existingCartItem.quantity === 1) {
     return cartItems.filter((cartItem) => cartItem.id !== cartItemToRemove.id);
   }
 
@@ -43,7 +43,7 @@ export type SetCartItems = ActionWithPayload<CART_ACTION_TYPES.SET_CART_ITEMS, C
 
 export const setIsCartOpen = withMatcher(
   (boolean: boolean): SetIsCartOpen =>
-  createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean)
+    createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, boolean)
 );
 
 export const setCartItems = withMatcher(

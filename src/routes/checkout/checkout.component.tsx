@@ -31,11 +31,11 @@ const Checkout = () => {
         </HeaderBlock>
       </CheckoutHeader>
       <h1>Checkout</h1>
-        {cartItems.map((cartItem) => (
-            <CheckoutItem key={cartItem.id} cartItem={cartItem} />
-        ))}
+      {cartItems.map((cartItem) => (
+        <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
+      ))}
       <Total>Total: ${cartTotal} </Total>
-      <PaymentForm />
+      <PaymentForm/>
     </CheckoutContainer>
   )
 }
