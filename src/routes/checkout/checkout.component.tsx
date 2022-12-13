@@ -35,6 +35,7 @@ const Checkout = () => {
         <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
       ))}
       <Total>Total: ${cartTotal} </Total>
+      <h3>Card for test: 4242 4242 4242 4242</h3>
       <PaymentForm/>
     </CheckoutContainer>
   )
