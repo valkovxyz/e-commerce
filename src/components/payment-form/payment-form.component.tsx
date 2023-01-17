@@ -53,7 +53,7 @@ const PaymentForm = () => {
     setIsProcessingPayment(false)
 
     if (paymentResult.error) {
-      alert(paymentResult.error)
+      alert('Wrong credit card details')
     } else {
       if (paymentResult.paymentIntent.status === 'succeeded') {
         alert('Payment successful')
