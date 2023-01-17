@@ -3,7 +3,10 @@ import { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { checkUserSession } from './store/user/user.action';
+
 import Spinner from "./components/spinner/spinner.component";
+
+import { GlobalStyle } from "./global.styles";
 
 const Navigation = lazy(() => import( './routes/navigation/navigation.component'))
 const Home = lazy(() => import('./routes/home/home.component'))
@@ -19,6 +22,8 @@ const App = () => {
   });
 
   return (
+    <>
+      <GlobalStyle />
     <Suspense fallback={<Spinner />}>
       <Routes>
         <Route path='/' element={<Navigation/>}>
@@ -29,6 +34,7 @@ const App = () => {
         </Route>
       </Routes>
     </Suspense>
+    </>
   )
 }
 

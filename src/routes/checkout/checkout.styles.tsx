@@ -7,22 +7,37 @@ export const CheckoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  
 `
 
 export const CheckoutHeader = styled.div`
   width: 100%;
-  padding: 10px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid darkgrey;
+  align-items: center;
+  @media screen and (max-width: 800px) {
+    margin: 10px;
+    width: 90vw;
+    justify-content: flex-start;
+  }
 `
 
 export const HeaderBlock = styled.div`
   text-transform: capitalize;
-  width: 23%;
+  width: 18%;
   
   &:last-child {
     width: 8%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 22%;
+    margin-bottom: 10px;
+    
+    &:last-child {
+      width: 12%;
+    }
   }
 `
 

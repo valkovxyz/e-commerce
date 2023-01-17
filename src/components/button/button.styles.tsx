@@ -18,7 +18,7 @@ export const BaseButton = styled.button`
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro',serif;
   font-weight: bolder;
   border: none;
   cursor: pointer;
@@ -30,6 +30,10 @@ export const BaseButton = styled.button`
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+  
+  @media screen and(max-width: 800px) {
+    font-size: 10px;
   }
 `;
 
