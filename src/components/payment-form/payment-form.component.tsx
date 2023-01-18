@@ -4,7 +4,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { StripeCardElement } from '@stripe/stripe-js'
 
 import { BUTTON_TYPES_CLASSES } from '../button/button.component';
-import { FormContainer, PaymentFormContainer, PaymentButton } from './payment-form.styles';
+import { FormContainer, PaymentFormContainer, PaymentButton, CardElementForm } from './payment-form.styles';
 
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
@@ -65,7 +65,7 @@ const PaymentForm = () => {
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
         <h2> Credit Card Payment: </h2>
-        <CardElement/>
+        <CardElementForm />
         <PaymentButton
           isLoading={isProcessingPayment}
           buttonType={BUTTON_TYPES_CLASSES.inverted}>
