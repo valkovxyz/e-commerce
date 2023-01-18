@@ -32,9 +32,6 @@ export const BaseButton = styled.button`
     border: 1px solid black;
   }
   
-  @media screen and(max-width: 800px) {
-    font-size: 10px;
-  }
 `;
 
 export const GoogleSignInButton = styled(BaseButton)`
@@ -44,6 +41,10 @@ export const GoogleSignInButton = styled(BaseButton)`
   &:hover {
     background-color: #357ae8;
     border: none;
+  }
+  @media screen and(max-width: 800px) {
+    font-size: 100px;
+    height: 30px;
   }
 `;
 
