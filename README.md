@@ -1,3 +1,3 @@
-Demo [https://shop.valkov.xyz/](https://shop.valkov.xyz/)
+Demo [https://monsters.valkov.xyz//](https://monsters.valkov.xyz/)
 
-Tech-stack: TypeScript, ReactJS, StyledComponents, Redux, Redux-Saga, Reselect, Firebase, Firestore, GoogleAuth, Stripe, Netlify.
+Tech-stack: TypeScript, ReactJS.
